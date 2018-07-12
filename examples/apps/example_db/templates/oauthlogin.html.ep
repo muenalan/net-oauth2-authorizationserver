@@ -1,0 +1,17 @@
+% layout 'default';
+% if ( $error ) {
+<b><%= $error %></b>
+% }
+<p>
+  username: Lee<br />
+  password: Pa55w0rd
+</p>
+%= form_for '/oauth/login' => (method => 'POST') => begin
+  %= label_for username => 'Username'
+  %= text_field 'username'
+
+  %= label_for password => 'Password'
+  %= password_field 'password'
+
+  %= submit_button 'Log me in', class => 'btn'
+% end

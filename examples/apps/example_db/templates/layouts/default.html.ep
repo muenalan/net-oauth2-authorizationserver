@@ -1,0 +1,4 @@
+<!doctype html><html>
+  <head><title>Overly Attached Social Network</title></head>
+  <body><h3>Welcome to Overly Attached Social Network</h3><%== content %></body>
+</html>

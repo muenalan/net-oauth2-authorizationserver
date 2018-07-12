@@ -1,0 +1,10 @@
+% layout 'default';
+%= form_for 'confirm_scopes' => (method => 'POST') => begin
+  <%= $client_id %> would like to be able to perform the following on your behalf:<ul>
+% for my $scope ( @{ $scopes } ) {
+  <li><%= $scope %></li>
+% }
+</ul>
+  %= submit_button 'Allow', class => 'btn', name => 'allow'
+  %= submit_button 'Deny', class => 'btn', name => 'deny'
+% end
